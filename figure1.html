@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure1</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link Boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <style>
+    body {
+      background-color: #f4f6f8;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">Tovin</a>
+
+        <ul class="navlist">
+            <li><a class="navitem" href="index.html #Toy">Back</a></li>
+        </ul>
+
+        <div class="header-icons">
+            <a href="#"><i class='bx bx-shopping-bag'></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <!-- Detail Produk -->
+    <div class="product-container">
+      <div class="product-image">
+        <img src="assets/figure1.jpg" alt="Product">
+      </div>
+      <div class="product-details">
+        <h1>Ace Figure</h1>
+        <p>Mini cute ace one piece figure 8x15 centimeter</p>
+        <div class="price">$ 9.99</div>
+
+        <div class="quantity-selector">
+          <button onclick="changeQty(-1)">−</button>
+          <input type="number" id="qty" value="1" min="1">
+          <button onclick="changeQty(1)">+</button>
+        </div>
+
+        <div class="buttons">
+          <button class="buy-now">Buy Now</button>
+          <button class="add-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Script untuk pemesanan kuantitas -->
+    <script>
+        function changeQty(amount) {
+        const qtyInput = document.getElementById('qty');
+        let qty = parseInt(qtyInput.value);
+        qty = isNaN(qty) ? 1 : qty;
+        qty = Math.max(1, qty + amount);
+        qtyInput.value = qty;
+        }
+    </script>
+</body>
+</html>
