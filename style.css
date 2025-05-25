@@ -257,3 +257,30 @@ header{
     columns: var(--bg-color);
 }
 
+/* Discount */
+.cta{
+    height: 80vh;
+    width: 100%;
+    background: url(assets/background33.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    color: var(--bg-color);
+}
+
+.cta-text h6{
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    margin-bottom: 14px;
+}
+
+.cta-text h4{
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: 1rem;
+    margin-bottom: 30px;
+}
+
