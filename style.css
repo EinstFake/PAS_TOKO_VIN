@@ -611,3 +611,36 @@ header{
       color: var(--bg-color);
   }
 
+/* Copyright */
+.last-text{
+    text-align: center;
+    padding: 20px;
+    background: var(--text-color);
+}
+
+.last-text p{
+    color: #555;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Up button */
+.top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.top i{
+    font-size: 22px;
+    color: var(--bg-color);
+    padding: 14px;
+    background: var(--main-color);
+    border-radius: 2rem;
+    transition: all .35s ease;
+}
+
+.top i:hover{
+    background: var(--text-color);
+}
+
