@@ -468,3 +468,39 @@ header{
       }
     }
 
+/* Ukuran Baju */
+        .size-selector {
+      margin-bottom: 20px;
+    }
+
+    .size-selector label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .sizes {
+      display: flex;
+      gap: 10px;
+    }
+
+    .sizes button {
+      padding: 10px 16px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      background-color: white;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .sizes button:hover {
+      border-color: #1e88e5;
+    }
+
+    .sizes button.active {
+      background-color: #1e88e5;
+      color: white;
+      border-color: #1e88e5;
+    }
+
