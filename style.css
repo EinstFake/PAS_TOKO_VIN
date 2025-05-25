@@ -180,5 +180,80 @@ header{
     background: var(--text-color);
 }
 
+/* featured content */
+.center-text{
+    text-align: center;
+}
 
+.center-text h2{
+    font-size: var(--h3-font);
+}
+
+.featured-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, auto));
+    gap: 1.3rem;
+    align-items: center;
+    margin-top: 4rem;
+    
+}
+
+.row{
+    position: relative;
+    transition: all .35s ease;
+}
+
+.row img{
+    width: 100%;
+    height: auto;
+}
+
+.fea-text{
+    position: absolute;
+    top: 40px;
+    left: 50px;
+}
+
+.fea-text h5{
+    font-size: 19px;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    color: var(--bg-color);
+}
+
+.fea-text p{
+    color: var(--text-color);
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.row .arrow{
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+}
+
+.row .arrow i{
+    height: 35px;
+    width: 35px;
+    background: var(--bg-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .35s ease;
+}
+
+.row:hover{
+    transform: scale(0.9) translateY(-5px);
+    cursor: pointer;
+}
+
+.row:hover i{
+    background: var(--main-color);
+    columns: var(--bg-color);
+}
 
