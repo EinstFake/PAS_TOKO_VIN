@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link Boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <style>
+    body {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      margin-top: 100px;
+      background-color: #f4f6f8;
+    }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">Tovin</a>
+
+        <ul class="navlist">
+            <li><a class="navitem" href="index.html #home">Back</a></li>
+        </ul>
+
+        <div class="header-icons">
+            <a href="#"><i class='bx bx-shopping-bag'></i></a>
+            <a href=""><i class='bx  bx-user-circle'></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <!-- Shopping Cart -->
+    <div class="cart-container">
+        <h1 class="shop">Shopping Cart</h1>
+
+    <table id="cart-table">
+        <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-price="50">
+            <td>Chopper Figure</td>
+            <td>$50</td>
+            <td><input type="number" value="1" min="1" class="quantity"></td>
+            <td class="subtotal">$50</td>
+        </tr>
+        <tr data-price="120">
+            <td>Zoro Hoodie</td>
+            <td>$120</td>
+            <td><input type="number" value="1" min="1" class="quantity"></td>
+            <td class="subtotal">$120</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="total">Total: <span id="total-price">$170</span></div>
+
+    <a href="#" class="btn btn-cart">Pay</a>
+
+     </div>
+
+  <script>
+    function formatDollar(amount) {
+      return new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+        minimumFractionDigits: 2
+      }).format(amount);
+    }
+
+    function updateTotals() {
+      let total = 0;
+      const rows = document.querySelectorAll("#cart-table tbody tr");
+
+      rows.forEach(row => {
+        const price = parseFloat(row.getAttribute("data-price"));
+        const quantity = parseInt(row.querySelector(".quantity").value);
+        const subtotal = price * quantity;
+
+        row.querySelector(".subtotal").textContent = formatDollar(subtotal);
+        total += subtotal;
+      });
+
+      document.getElementById("total-price").textContent = formatDollar(total);
+    }
+
+    document.querySelectorAll(".quantity").forEach(input => {
+      input.addEventListener("input", updateTotals);
+    });
+
+    updateTotals();
+  </script>
+</body>
+</html>

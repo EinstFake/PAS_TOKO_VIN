@@ -31,43 +31,44 @@
         </ul>
 
         <div class="header-icons">
-            <a class="navitem" href="#"><i class='bx bx-shopping-bag'></i></a>
+            <a href="cart.html"><i class='bx bx-shopping-bag'></i></a>
+            <a href=""><i class='bx  bx-user-circle'></i></a>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
     </header>
 
     <!-- Detail Produk -->
-     <div class="product-container">
-    <div class="product-image">
-      <img src="assets/women1.jpg" alt="Product">
-    </div>
-    <div class="product-details">
-      <h1>Strawberry Sweater</h1>
-      <p>Strawberry sweater made using cotton and polyester</p>
-      <div class="price">$ 11.99</div>
+    <div class="product-container">
+      <div class="product-image">
+        <img src="assets/women1.jpg" alt="Product">
+      </div>
+      <div class="product-details">
+        <h1>Strawberry Sweater</h1>
+        <p>Strawberry sweater made using cotton and polyester</p>
+        <div class="price">$ 11.99</div>
 
-        <div class="size-selector">
-            <label for="size">Choose your size:</label>
-                <div class="sizes">
-                    <button onclick="selectSize(this)">S</button>
-                    <button onclick="selectSize(this)">M</button>
-                    <button onclick="selectSize(this)">L</button>
-                    <button onclick="selectSize(this)">XL</button>
-                </div>
+          <div class="size-selector">
+              <label for="size">Choose your size:</label>
+                  <div class="sizes">
+                      <button onclick="selectSize(this)">S</button>
+                      <button onclick="selectSize(this)">M</button>
+                      <button onclick="selectSize(this)">L</button>
+                      <button onclick="selectSize(this)">XL</button>
+                  </div>
+          </div>
+
+        <div class="quantity-selector">
+          <button onclick="changeQty(-1)">−</button>
+          <input type="number" id="qty" value="1" min="1">
+          <button onclick="changeQty(1)">+</button>
         </div>
 
-      <div class="quantity-selector">
-        <button onclick="changeQty(-1)">−</button>
-        <input type="number" id="qty" value="1" min="1">
-        <button onclick="changeQty(1)">+</button>
-      </div>
-
-      <div class="buttons">
-        <button class="buy-now">Buy Now</button>
-        <button class="add-cart">Add to Cart</button>
+        <div class="buttons">
+          <button class="buy-now">Buy Now</button>
+          <button class="add-cart">Add to Cart</button>
+        </div>
       </div>
     </div>
-  </div>
 
   <!-- Script untuk pemesanan kuantitas juga untuk memilih ukuran -->
   <script>
