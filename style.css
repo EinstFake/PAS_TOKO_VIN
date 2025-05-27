@@ -28,13 +28,6 @@ section{
     padding: 100px 14%;
 }
 
-/* Responsive Navbar Biar Pas Discroll Jadi Ada Background */
-header.sticky{
-    background: var(--bg-color);
-    padding: 14px 14%;
-    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
-}
-
 /* Navbar */
 header{
     width: 100%;
@@ -46,8 +39,13 @@ header{
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    padding: 20px 14%;
+    padding: 14px 14%;
     transition: all .35s ease;
+
+    background: var(--bg-color);
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
 }
 
 .navlist{
@@ -113,8 +111,7 @@ header{
         transition: width 0.3s ease-in-out;
     }
 
-    .navitem:hover::before,
-    .navitem.active::before {
+    .navitem:hover::before {
         width: 100%;
     }
 }
@@ -467,7 +464,7 @@ header{
      }
   }
 
-/* Ukuran Baju */
+/* Produk Khusus Pakaian */
       .size-selector {
     margin-bottom: 20px;
   }
